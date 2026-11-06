@@ -1,4 +1,4 @@
-"""Snartrevolutions beheer: allowlisted, time-limited support account access."""
+"""Smartrevolutions beheer: allowlisted, time-limited support account access."""
 from datetime import datetime, timedelta, timezone
 import logging
 import voluptuous as vol
@@ -8,7 +8,7 @@ from homeassistant.helpers.event import async_track_point_in_utc_time
 from homeassistant.helpers.storage import Store
 from homeassistant.exceptions import HomeAssistantError
 
-DOMAIN = "snartrevolutions_beheer"
+DOMAIN = "smartrevolutions_beheer"
 _LOGGER = logging.getLogger(__name__)
 CONFIG_SCHEMA = vol.Schema({DOMAIN: vol.Schema({
     vol.Required("support_user_id"): cv.string,

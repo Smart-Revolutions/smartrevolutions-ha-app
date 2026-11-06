@@ -3,7 +3,7 @@
 type: vertical-stack
 cards:
   - type: markdown
-    content: '## Snartrevolutions beheer\nTijdelijke beheerderstoegang'
+    content: '## Smartrevolutions beheer\nTijdelijke beheerderstoegang'
   - type: grid
     columns: 2
     square: false
@@ -13,28 +13,28 @@ cards:
         icon: mdi:timer-outline
         tap_action:
           action: perform-action
-          perform_action: snartrevolutions_beheer.activate
+          perform_action: smartrevolutions_beheer.activate
           data: {minutes: 30}
       - type: button
         name: 1 uur
         icon: mdi:timer-outline
         tap_action:
           action: perform-action
-          perform_action: snartrevolutions_beheer.activate
+          perform_action: smartrevolutions_beheer.activate
           data: {minutes: 60}
       - type: button
         name: 4 uur
         icon: mdi:timer-outline
         tap_action:
           action: perform-action
-          perform_action: snartrevolutions_beheer.activate
+          perform_action: smartrevolutions_beheer.activate
           data: {minutes: 240}
       - type: button
         name: 24 uur
         icon: mdi:timer-outline
         tap_action:
           action: perform-action
-          perform_action: snartrevolutions_beheer.activate
+          perform_action: smartrevolutions_beheer.activate
           data: {minutes: 1440}
   - type: entities
     entities:
@@ -51,4 +51,4 @@ cards:
     icon: mdi:shield-off
     tap_action:
       action: perform-action
-      perform_action: snartrevolutions_beheer.revoke
+      perform_action: smartrevolutions_beheer.revoke

@@ -1,4 +1,4 @@
-# Snartrevolutions beheer — v0.1.0 (prototype)
+# Smartrevolutions beheer — v0.1.0 (prototype)
 
 An extensible Home Assistant custom integration, starting with temporary support administrator access.
 
@@ -6,19 +6,19 @@ An extensible Home Assistant custom integration, starting with temporary support
 
 ## Install
 
-1. HACS > three dots > Custom repositories > URL `https://github.com/Smart-Revolutions/smartrevolutions-ha-app` > Integration. Alternatively copy `custom_components/snartrevolutions_beheer` into the Home Assistant config directory.
+1. HACS > three dots > Custom repositories > URL `https://github.com/Smart-Revolutions/smartrevolutions-ha-app` > Integration. Alternatively copy `custom_components/smartrevolutions_beheer` into the Home Assistant config directory.
 2. Find Home Assistant user IDs as an administrator (Settings > People > Users or via administrator WebSocket `config/auth/list`). Do not confuse IDs with usernames.
 3. Add to `configuration.yaml`:
 
 ```yaml
-snartrevolutions_beheer:
+smartrevolutions_beheer:
   support_user_id: "SUPPORT_USER_UUID"
   allowed_user_ids:
     - "ORDINARY_USER_UUID"
   max_minutes: 1440
 ```
 
-4. Restart Home Assistant. Under Developer tools > Actions check `snartrevolutions_beheer.activate` and `snartrevolutions_beheer.revoke`.
+4. Restart Home Assistant. Under Developer tools > Actions check `smartrevolutions_beheer.activate` and `smartrevolutions_beheer.revoke`.
 5. Add `dashboard-example.yaml` as a manual card, and create the `input_number.sr_support_minutes` helper (range 1–1440, step 1).
 6. For the custom duration button, create the following script in `scripts.yaml` (or via the UI), then reload scripts:
 
@@ -26,7 +26,7 @@ snartrevolutions_beheer:
 sr_activate_custom:
   alias: SR Activate Custom
   sequence:
-    - action: snartrevolutions_beheer.activate
+    - action: smartrevolutions_beheer.activate
       data:
         minutes: "{{ states('input_number.sr_support_minutes') | int(30) }}"
 ```
