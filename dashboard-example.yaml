@@ -3,7 +3,7 @@
 type: vertical-stack
 cards:
   - type: markdown
-    content: '## Smartrevolutions beheer\nTijdelijke beheerderstoegang'
+    content: "## Smartrevolutions beheer\nTijdelijke beheerderstoegang"
   - type: grid
     columns: 2
     square: false
