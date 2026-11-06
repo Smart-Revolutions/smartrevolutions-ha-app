@@ -1,0 +1,16 @@
+activate:
+  name: Activate support account
+  description: Temporarily enable the configured administrator account.
+  fields:
+    minutes:
+      name: Duration in minutes
+      required: true
+      example: 30
+      selector:
+        number:
+          min: 1
+          max: 10080
+          mode: box
+revoke:
+  name: Revoke support access
+  description: Disable the configured support administrator account immediately.

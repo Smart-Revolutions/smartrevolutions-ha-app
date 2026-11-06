@@ -1,2 +1,0 @@
-#!/usr/bin/env bashio
-bashio::log.info "Smart Revolutions app gestopt"
