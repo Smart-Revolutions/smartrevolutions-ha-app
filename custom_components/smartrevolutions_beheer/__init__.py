@@ -41,8 +41,13 @@ async def async_setup(hass: HomeAssistant, config: dict) -> bool:
             cancel()
             cancel = None
         user = await hass.auth.async_get_user(support_id)
-        if user and user.is_active:
-            await hass.auth.async_deactivate_user(user)
+        if user:
+            if user.is_active:
+                await hass.auth.async_deactivate_user(user)
+            # Revoke all refresh tokens (also long-lived tokens): this ends
+            # sessions that are already open, including websocket connections.
+            for token in list(user.refresh_tokens.values()):
+                hass.auth.async_remove_refresh_token(token)
         expires = None
         await store.async_save({"expires": None})
         hass.bus.async_fire(f"{DOMAIN}_changed", {"active": False})
