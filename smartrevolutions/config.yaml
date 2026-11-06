@@ -1,0 +1,14 @@
+name: Smart Revolutions
+version: "0.1.0"
+slug: smartrevolutions
+description: Smart Revolutions app voor Home Assistant (skelet)
+url: https://smartrevolutions.nl
+arch:
+  - aarch64
+  - amd64
+init: false
+startup: application
+boot: auto
+homeassistant_api: true
+options: {}
+schema: {}
